@@ -2,6 +2,7 @@
 -- https://github.com/nvim-neo-tree/neo-tree.nvim
 
 return {
+<<<<<<< HEAD
   'nvim-neo-tree/neo-tree.nvim',
   version = '*',
   dependencies = {
@@ -18,8 +19,26 @@ return {
       window = {
         mappings = {
           ['q'] = 'close_window',
+=======
+        'nvim-neo-tree/neo-tree.nvim',
+        version = '*',
+        dependencies = {
+                'nvim-lua/plenary.nvim',
+                'nvim-tree/nvim-web-devicons', -- not strictly required, but recommended
+                'MunifTanjim/nui.nvim',
         },
-      },
-    },
-  },
+        lazy = false,
+        keys = {
+                { '<leader>e', ':Neotree reveal<CR>', desc = 'NeoTree reveal', silent = true },
+        },
+        opts = {
+                filesystem = {
+                        window = {
+                                mappings = {
+                                        ['q'] = 'close_window',
+                                },
+                        },
+                },
+>>>>>>> 139d48f (update config with multiple plugins)
+        },
 }
